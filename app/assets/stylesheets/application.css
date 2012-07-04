@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.sign_in {
+	position: inline;
+	text-align: right;
+	margin-top: 10px;
+	padding: 10px 20px 0px 0px;
+	height: 30px;
+	background: #0080FF;
+	color: #fff;
+}
+
+.sign_in a:link, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.sign_in a:hover {
+	text-decoration: underline;
+}
+
+.sign_in .logo_link {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.content {
+	margin-left: 15%;
+	margin-top: 100px;
+	min-width: 800px;
+	min-height: 500px;
+	width: 70%;
+	height: 50%;
+	border: 1px solid;
+	padding: 10px 0px 0px 10px;
+}
+
+.footer {
+	text-align: center;
+}
+
+.email, .password, .boolean {
+	margin: 0px 0px 10px 10px;
+}
+
+.simple_form.new_user {
+	text-align: right;
+	margin-right: 30%;
+}
+
+.form-actions {
+	text-align: center;
+}

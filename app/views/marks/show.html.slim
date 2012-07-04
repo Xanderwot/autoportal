@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @mark.name
+
+= link_to 'Edit', edit_mark_path(@mark)
+'|
+= link_to 'Back', marks_path
