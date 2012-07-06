@@ -3,5 +3,7 @@ class Mark < ActiveRecord::Base
   include Enumerize
   validates :name, presence: true
 
-  enumerize :name, :in => CarValue.options('name') || []
+  test_array = Rails.env.test? ? ['Ford', 'BMW', 'Audi'] : []
+
+  enumerize :name, :in => CarValue.options('name') || test_array
 end
