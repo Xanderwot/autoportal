@@ -1,0 +1,2 @@
+Fabricator(:mark) do
+end

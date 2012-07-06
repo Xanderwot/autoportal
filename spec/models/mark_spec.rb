@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Mark do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:car_value) { Fabricate(:car_value, :option => 'name', :car_values => ['Ford', 'BMW', 'Audi']) }
+
+  it 'should not be valid' do
+    subject.name = 'Merzedez'
+    subject.valid?.should be_false
+  end
 end

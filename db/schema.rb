@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120704125828) do
+ActiveRecord::Schema.define(:version => 20120706200052) do
+
+  create_table "car_values", :force => true do |t|
+    t.text     "car_values"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "option"
+  end
+
+  create_table "enumerize_values", :force => true do |t|
+    t.string   "model"
+    t.string   "field"
+    t.text     "e_values"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "marks", :force => true do |t|
     t.string   "name"

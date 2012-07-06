@@ -58,5 +58,13 @@ module Autoportal
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators do |g|
+      g.template_engine     :slim, :sections => true, :pretty => true
+      g.test_framework      :rspec, :view_specs => false, :controller_specs => false, :helper_specs => false, fixture: true
+      g.helper              false
+      g.fixture_replacement :fabrication
+      g.assets              false
+    end
   end
 end

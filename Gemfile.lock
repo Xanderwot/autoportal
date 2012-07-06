@@ -64,6 +64,8 @@ GEM
     draper (0.14.0)
       actionpack (~> 3.2)
       activesupport (~> 3.2)
+    enumerize (0.2.2)
+      activesupport (>= 3.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -202,6 +204,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   draper
+  enumerize
   fabrication
   jquery-rails
   kaminari
