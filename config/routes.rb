@@ -1,5 +1,5 @@
 Autoportal::Application.routes.draw do
-  resources :marks
+  resources :marks, :advertisements
 
   devise_for :users
 

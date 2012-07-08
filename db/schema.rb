@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120706200052) do
+ActiveRecord::Schema.define(:version => 20120708151607) do
+
+  create_table "advertisements", :force => true do |t|
+    t.string   "title"
+    t.integer  "advertisementable_id"
+    t.string   "advertisementable_type"
+    t.boolean  "paid"
+    t.datetime "paid_at"
+    t.integer  "created_by_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
 
   create_table "car_values", :force => true do |t|
     t.text     "car_values"
@@ -24,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20120706200052) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "created_by_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -39,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20120706200052) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "role"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
