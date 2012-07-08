@@ -5,5 +5,5 @@ class Mark < ActiveRecord::Base
 
   test_array = Rails.env.test? ? ['Ford', 'BMW', 'Audi'] : []
 
-  enumerize :name, :in => CarValue.options('name') || test_array
+  enumerize :name, :in => CarValue.options('name') || test_array if CarValue.nil?
 end
