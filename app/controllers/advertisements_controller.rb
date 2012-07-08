@@ -1,7 +1,3 @@
 class AdvertisementsController < ApplicationController
-  load_and_authorize_resoure
-
-  def index
-  end
-
+	load_and_authorize_resource
 end

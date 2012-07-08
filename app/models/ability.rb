@@ -9,8 +9,12 @@ class Ability
 
   def admin
     can :manage, Mark
+    can :manage, Advertisement
+    can :manage, User
   end
 
   def user
+    can :read, Advertisement
+    can :manage, User, :user_id => user
   end
 end
