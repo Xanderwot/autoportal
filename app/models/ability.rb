@@ -12,8 +12,9 @@ class Ability
     can :manage, Advertisement
     can :manage, User
 
-    #RailsAdmin part
+    #Admin panel ability
     can :access, :rails_admin
+    can :dashboard
   end
 
   def user

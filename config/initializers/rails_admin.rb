@@ -2,7 +2,7 @@
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
-  
+
   config.authorize_with :cancan
 
   # If your default_local is different from :en, uncomment the following 2 lines and set your default locale here:
@@ -115,20 +115,21 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-  # config.model Mark do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+  config.model Mark do
+    # Found associations:
+    # Found columns:
+      configure :id, :integer 
+      configure :name, :string
+      configure :logo 
+      configure :created_at, :datetime 
+      configure :updated_at, :datetime   #   # Sections:
+    list do; end
+    export do; end
+    show do; end
+    edit do; end
+    create do; end
+    update do; end
+  end
   # config.model News do
   #   # Found associations:
   #   # Found columns:
@@ -168,11 +169,11 @@ RailsAdmin.config do |config|
           User.role.options
         end
       end
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
+    list do; end
+    export do; end
+    show do; end
+    edit do; end
+    create do; end
+    update do; end
    end
 end

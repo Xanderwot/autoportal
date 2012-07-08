@@ -67,4 +67,5 @@ module Autoportal
       g.assets              false
     end
   end
+  Paperclip::Railtie.insert
 end
