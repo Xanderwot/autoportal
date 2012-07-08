@@ -4,20 +4,13 @@ class Ability
   def initialize(user)
 
     @user = user
-    send(@user.role.presence || :member) if @user
-  end
-
-  def member
-    can :index, :home
+    send(@user.role) if @user
   end
 
   def admin
-    member
-
-    can :manage, Advertisement
+    can :manage, Mark
   end
 
   def user
-    member
   end
 end
