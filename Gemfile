@@ -26,6 +26,7 @@ gem 'twitter-bootstrap-rails'
 gem "nested_form"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'enumerize'
+gem 'rails_admin'
 
 # Gems used only for assets and not required
 # in production environments by default.
