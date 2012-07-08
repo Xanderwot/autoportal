@@ -2,6 +2,8 @@
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
+  
+  config.authorize_with :cancan
 
   # If your default_local is different from :en, uncomment the following 2 lines and set your default locale here:
   # require 'i18n'
@@ -145,24 +147,27 @@ RailsAdmin.config do |config|
   # end
   config.model User do
   #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :email, :string 
-  #     configure :password, :password         # Hidden 
-  #     configure :password_confirmation, :password         # Hidden 
-  #     configure :reset_password_token, :string         # Hidden 
-  #     configure :reset_password_sent_at, :datetime 
-  #     configure :remember_created_at, :datetime 
-  #     configure :sign_in_count, :integer 
-  #     configure :current_sign_in_at, :datetime 
-  #     configure :last_sign_in_at, :datetime 
-  #     configure :current_sign_in_ip, :string 
-  #     configure :last_sign_in_ip, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-      field :role do 
-        User.role.options.flatten
-      end 
+    # Found columns:
+      configure :id, :integer 
+      configure :email, :string 
+      configure :password, :password         # Hidden 
+      configure :password_confirmation, :password         # Hidden 
+      configure :reset_password_token, :string         # Hidden 
+      configure :reset_password_sent_at, :datetime 
+      configure :remember_created_at, :datetime 
+      configure :sign_in_count, :integer 
+      configure :current_sign_in_at, :datetime 
+      configure :last_sign_in_at, :datetime 
+      configure :current_sign_in_ip, :string 
+      configure :last_sign_in_ip, :string 
+      configure :created_at, :datetime 
+      configure :updated_at, :datetime 
+      configure :role, :enum do
+        enum do
+          # except = bindings[:object].id
+          User.role.options
+        end
+      end
   #   list do; end
   #   export do; end
   #   show do; end

@@ -16,6 +16,11 @@ html lang="en"
     link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"
 
   body
+    - flash.each do |name, msg|
+      - name = alert_type(name) 
+      div class="alert alert-#{name}"
+        .close data-dismiss="alert" ×
+        =msg
     .navbar
       .navbar-inner
         .container

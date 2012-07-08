@@ -11,10 +11,13 @@ class Ability
     can :manage, Mark
     can :manage, Advertisement
     can :manage, User
+
+    #RailsAdmin part
+    can :access, :rails_admin
   end
 
   def user
     can :read, Advertisement
-    can :manage, User, :user_id => user
+    can :manage, User, :id => @user.id
   end
 end
